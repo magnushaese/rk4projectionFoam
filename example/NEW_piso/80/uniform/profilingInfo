@@ -1,0 +1,172 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     4.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       regIOobject;
+    location    "80/uniform";
+    object      profilingInfo;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+profilingInfo
+(
+
+    {
+        id              15;
+        parentId        11;
+        description     "Foam::Time::writeObject - outputTime";
+        calls           15;
+        totalTime       2.40123;
+        childTime       0;
+        onStack         1;
+    }
+
+    {
+        id              11;
+        parentId        1;
+        description     "Foam::Time::writeObject";
+        calls           15000;
+        totalTime       2.46635;
+        childTime       2.40123;
+        onStack         1;
+    }
+
+    {
+        id              1;
+        description     "application::main";
+        calls           1;
+        totalTime       7044.04;
+        childTime       5897.39;
+        onStack         1;
+    }
+
+    {
+        id              14;
+        parentId        12;
+        description     "FO::forces::execute";
+        calls           14999;
+        totalTime       0.030566;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              5;
+        parentId        3;
+        description     "FO::forces::start";
+        calls           1;
+        totalTime       0.000133;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              13;
+        parentId        12;
+        description     "FO::pressProbes::execute";
+        calls           14999;
+        totalTime       0.82167;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              4;
+        parentId        3;
+        description     "FO::pressProbes::start";
+        calls           1;
+        totalTime       0.002494;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              3;
+        parentId        2;
+        description     "functionObjectList::read";
+        calls           1;
+        totalTime       0.013948;
+        childTime       0.002627;
+        onStack         0;
+    }
+
+    {
+        id              12;
+        parentId        1;
+        description     "functionObjects_.execute()";
+        calls           14999;
+        totalTime       0.923216;
+        childTime       0.852236;
+        onStack         0;
+    }
+
+    {
+        id              2;
+        parentId        1;
+        description     "functionObjects_.start()";
+        calls           1;
+        totalTime       0.013956;
+        childTime       0.013948;
+        onStack         0;
+    }
+
+    {
+        id              6;
+        parentId        1;
+        description     "fvMatrix::solve_U";
+        calls           15000;
+        totalTime       3713.87;
+        childTime       3690.48;
+        onStack         0;
+    }
+
+    {
+        id              9;
+        parentId        1;
+        description     "fvMatrix::solve_p";
+        calls           30000;
+        totalTime       2180.12;
+        childTime       2169.11;
+        onStack         0;
+    }
+
+    {
+        id              7;
+        parentId        6;
+        description     "lduMatrix::solver_Ux";
+        calls           15000;
+        totalTime       50.0811;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              8;
+        parentId        6;
+        description     "lduMatrix::solver_Uy";
+        calls           15000;
+        totalTime       3640.4;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              10;
+        parentId        9;
+        description     "lduMatrix::solver_p";
+        calls           30000;
+        totalTime       2169.11;
+        childTime       0;
+        onStack         0;
+    }
+);
+
+
+// ************************************************************************* //
